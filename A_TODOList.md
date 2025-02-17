@@ -1,0 +1,1 @@
+现在暂时用不到，但是之后可能要用到，load_eegdatasets中，修改ClipTextencoder，修改之前删掉ViT....py文件

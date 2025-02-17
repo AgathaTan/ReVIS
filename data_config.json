@@ -1,0 +1,13 @@
+{
+    "data_path": "./Preprocessed_data_100Hz",
+    "img_directory_training": "./THINGS/images_set/training_images",
+    
+    "img_directory_test": "./THINGS/images_set/test_images",
+    "features_path":"/home/ldy/Workspace/THINGS/CLIP",
+    "pretrained_model_path": "./stable-diffusion-v1-5/",
+
+    "output_dir" : "./outputs",
+    "Semanric_logging_dir": "Semanric_Encoder_logs",
+    "Submodality_logging_dir": "Submodality_Encoder_logs"
+}
+
