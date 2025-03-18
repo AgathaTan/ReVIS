@@ -1,0 +1,47 @@
+class Configs:
+    def __init__(self):
+        self.device = "cuda:0"                     # device
+        self.train_batch_size = 16                 # Batch size
+        self.train_low_level_batch_size = 4
+        self.task_name = 'reconstruction'          # Example task name
+        self.seq_len = 100                         # Sequence length
+        self.channels_num = 63
+        self.freq_seq_len = 50                     # Frequency sequence length
+        self.output_attention = False              # Whether to output attention weights
+        self.d_model = 1024                         # Model final dimension
+        self.patch_d_model = 64                    # Patch encode dimension
+        # self.time_d_model = 512                   # Time_encoder dimension
+        # self.spac_d_model = 512                    # Spac_encoder dimension
+        self.patch_len = 4                         # Patch len
+        self.patch_stride = 4                      # Patch stride
+        self.embed = 'timeF'                       # Time encoding method
+        self.freq = 'h'                            # Time frequency
+        self.joint_train = False                   # Joint training or not
+        self.num_subjects = 10                     # num_subjects
+        self.dropout = 0.25                        # Dropout rate
+        self.factor = 1                            # Attention scaling factor
+        self.n_heads = 4                           # Number of attention heads
+        self.encode_layers = 1                     # Number of encoder layers
+        # self.time_encode_layers = 2              # Number of time_encoder attn layers
+        # self.spac_encode_layers = 2              # Number of time_encoder attn layers
+        self.submodal_encode_layers = 1            # Number of submodal encoder layers
+        self.submodal_dim = 256                   # extra dim trained by Submodality_Encoder
+        self.patch_d_ff = 128                      # Dimension of the feedforward network
+        self.spac_d_ff = 1280                      # Dimension of the feedforward network
+        self.activation = 'gelu'                   # Activation function
+        self.enc_in = 63                           # Encoder input dimension (example value)
+        self.padding_patch = 'end'                 # Padding Path help to be modified to general case
+        self.num_joint_train_epochs = 30          # Joint Train epochs number
+        self.num_train_epochs = 10                # Train epochs number
+        self.num_train_low_level_epochs = 100
+        self.learning_rate = 1e-4                  # Learning rate to use
+        self.weight_decay = 1e-2                   # Weight decay to use
+        self.log_with = "wandb"                    # The integration to report the results and logs to
+        self.gradient_accumulation_steps = 2      # Gradient accumulation steps
+        self.mse_semantic_mult = 6e5
+        self.mse_submodal_mult = 1e6
+        self.submodal_mse = True
+        self.prior_mult = 10
+        self.text_image_ratio = 0.5
+        # pretrained model path = "runwayml/stable-diffusion-v1-5/"
+
